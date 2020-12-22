@@ -17,7 +17,7 @@
     Ville : <input type="text" name="ville"/> <br/>
     Code postal : <input type="text" name="cp"/> <br/>
     Téléphone : <input type="text" name="tel"/> <br/>
-    <input type="submit" value="Valider" onclick="inscription()"/>
+    <input type="submit" value="Valider"/>
   </form>
 </body>
 </html>
