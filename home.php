@@ -7,6 +7,7 @@
   <form>
     <button formaction="inscription.php">Créer un compte</button>
     <button formaction="connexion.php">Se connecter</button>
+    <button formaction="afficher_ingredients.php">Voir les ingrédients</button>
   </form>
 
   <?php
