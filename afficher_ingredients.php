@@ -37,6 +37,7 @@ echo "<h3>Recettes avec cet ingrédient : </h3>";
 foreach ($Recettes as $recette) {
   if(in_array($ingredient, $recette["index"])){
     afficher_recette($recette);
+    echo "<input type='button' value='ajouter'>";
   }
 }
 ?>
