@@ -70,7 +70,6 @@ foreach ($Recettes as $recette) {
       // cas où l'utilisateur est connecté : on ajoute la recette à la bdd
       $db = mysqli_connect("127.0.0.1:3306", "root", "Bemuwu_5", "proj_dev_web");
       $query = "INSERT INTO recettes_fav (login, recette) VALUES ('" . $_SESSION['login'] . "', '" . $_POST['recettefav'] . "')";
-      print_r($query);
       $res = mysqli_query($db, $query);
     }
   }
