@@ -3,7 +3,15 @@
 
 
   function afficher_recette($recette){
+    // afficher titre
     echo "<h5>", $recette["titre"], "</h5>";
+    // afficher l'image si elle existe
+    $titre = str_replace(" ", "_", $recette["titre"]);
+    $chemin = "Photos/" . $titre . ".jpg";
+    if(file_exists($chemin)){
+      echo "<img src=\"Photos/", $titre, ".jpg\" />";
+    }
+    // afficher la recette
     echo "<p>", $recette["ingredients"] , "</p>";
     echo "<p>", $recette["preparation"] , "</p>";
   }
