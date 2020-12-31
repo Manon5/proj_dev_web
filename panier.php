@@ -7,14 +7,18 @@
 <body>
 	<?php
 		include('Donnees.inc.php');
-		/* Initialisation du panier*/
-		$panier = array();
-
+		session_start();
+		// affichage du panier
+		$panier = $_SESSION['panier'];
 		
+		foreach($panier as $recette){
+			echo "<li> - ", $recette, "</li>";
+		}
+
+
 
 
 	?>
 
 </body>
 </html>
-
