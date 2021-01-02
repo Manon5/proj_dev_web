@@ -40,12 +40,12 @@
 
    $element =   $Hierarchie[$_POST["oui"]];
    foreach($element["sous-categorie"] as $rjgh)
-      foreach($Recettes as $pasrtek)
-      print_r($pasrtek);
-      if(in_array($rjgh,$pasrtek["index"]))
-            echo "triple pute";  
+      foreach($Recettes as $voila)
+      print_r($voila);
+      if(in_array($rjgh,$voila["index"]))
+            echo "oui";  
           else
-            echo "hehfizo";
+            echo "non";
   
    
 
