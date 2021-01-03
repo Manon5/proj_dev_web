@@ -28,6 +28,7 @@
 
 
    
+<<<<<<< HEAD
  
    /*	$element = $Hierarchie[$_POST["oui"]]["sous-categorie"];
    	print_r($element);
@@ -47,6 +48,27 @@
                 }
           } 
     }
+=======
+   function afficher_hierarchie($recette)
+   {
+       // afficher titre
+      echo "<h5>", $Hierarchie["Épice"], "</h5>";
+      echo "<p>", $Hierarchie["Épice"]["sous-categorie"] , "</p>";
+    
+    }   
+
+
+
+   $element =   $Hierarchie[$_POST["oui"]];
+   foreach($element["sous-categorie"] as $rjgh)
+      foreach($Recettes as $voila)
+      print_r($voila);
+      if(in_array($rjgh,$voila["index"]))
+            echo "oui";  
+          else
+            echo "non";
+  
+>>>>>>> 65615c8916609a472cd3fc338007b525ebc111dd
    
 
 
