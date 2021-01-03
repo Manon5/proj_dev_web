@@ -28,25 +28,25 @@
 
 
    
-   function afficher_hierarchie($recette)
-   {
-       // afficher titre
-      echo "<h5>", $Hierarchie["Épice"], "</h5>";
-      echo "<p>", $Hierarchie["Épice"]["sous-categorie"] , "</p>";
-    
-    }   
-
-
-
-   $element =   $Hierarchie[$_POST["oui"]];
-   foreach($element["sous-categorie"] as $rjgh)
-      foreach($Recettes as $pasrtek)
-      print_r($pasrtek);
-      if(in_array($rjgh,$pasrtek["index"]))
-            echo "triple pute";  
-          else
-            echo "hehfizo";
-  
+ 
+   /*	$element = $Hierarchie[$_POST["oui"]]["sous-categorie"];
+   	print_r($element);
+     foreach($Recettes as $voila){
+		if(in_array($element,$voila["index"])){
+            echo "oui";}
+          else{
+            print_r($voila["index"]);}
+        
+  	}*/
+  	$sousCategories = $Hierarchie[$_POST["oui"]]["sous-categorie"];
+    foreach($sousCategories as $ingredient)
+    {
+        foreach ($Recettes as $recette) {
+            if(in_array($ingredient, $recette["index"])){
+                    afficher_recette($recette);
+                }
+          } 
+    }
    
 
 

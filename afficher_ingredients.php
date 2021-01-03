@@ -59,9 +59,10 @@
   <input type="search" name="oui" placeholder="Aliment souhaité" class="souhait" id="tags"/>
   <input type="search" name="non" placeholder="Aliment non souhaité" class="nonsouhait" />
   <input type="submit" value="Valider"/>
+	</form>
   </div>
 
-</div>
+
 <?php
 
 
